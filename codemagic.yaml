@@ -4,6 +4,11 @@ workflows:
     instance_type: mac_mini_m1
     max_build_duration: 30
     scripts:
+      - name: Generar carpeta Android si falta
+        script: |
+          if [ ! -d "android" ]; then
+            flutter create --platforms=android --org com.denniscastillo .
+          fi
       - name: Obtener paquetes
         script: flutter pub get
       - name: Generar APK
