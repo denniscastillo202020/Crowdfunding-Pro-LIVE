@@ -3,13 +3,10 @@ workflows:
     name: Compilar APK Android
     instance_type: mac_mini_m1
     max_build_duration: 30
-    environment:
-      flutter: stable
     scripts:
-      - name: Obtener dependencias
+      - name: Obtener paquetes
         script: flutter pub get
-      - name: Compilar APK
-        script: flutter build apk --release
+      - name: Generar APK
+        script: flutter build apk --debug
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
-
