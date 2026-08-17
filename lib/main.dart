@@ -121,7 +121,7 @@ class _LiveScreenState extends State<LiveScreen> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Column(
-                  crossAxisAlignment: Cross.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text("🏆 TOP COLABORADORES", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.amber)),
                     const Divider(color: Colors.grey),
